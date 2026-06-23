@@ -11,11 +11,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install dependencies
+    - name: Install system dependencies
       run: |
         sudo apt update
-        sudo apt install -y python3-pip python3-setuptools python3-distutils git zip openjdk-17-jdk
-        pip3 install --user buildozer cython
+        sudo apt install -y python3-pip python3-setuptools python3-distutils git zip openjdk-17-jdk unzip
+
+    - name: Install Buildozer
+      run: |
+        pip3 install --user cython buildozer
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Install Android SDK/NDK
+      run: |
+        sudo apt install -y wget
+        buildozer android update
 
     - name: Build APK
       run: |
