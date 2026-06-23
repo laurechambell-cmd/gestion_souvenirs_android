@@ -8,29 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install system dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y python3-pip python3-setuptools python3-distutils git zip openjdk-17-jdk unzip
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
 
-    - name: Install Buildozer
+    - name: Build APK using Buildozer Docker image
       run: |
-        pip3 install --user cython buildozer
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        docker run --rm \
+          -v ${{ github.workspace }}:/home/buildozer/app \
+          kivy/buildozer \
+          buildozer android debug
 
-    - name: Install Android SDK/NDK
-      run: |
-        sudo apt install -y wget
-        buildozer android update
-
-    - name: Build APK
-      run: |
-        buildozer android debug
-
-    - name: Upload APK
+    - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
         name: apk
