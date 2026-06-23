@@ -1,0 +1,43 @@
+{
+  "BOULE NEIGE": {
+    "BOULE NEIGE": 4.0
+  },
+  "PELUCHE": {
+    "BOUQ": 11.0,
+    "ECUREUIL": 12.0,
+    "HUSKY": 11.0,
+    "LOUP": 11.0,
+    "MARMOTTE": 15.0,
+    "PELUCHES MARIONNETTES": 8.0,
+    "PORTE CLEFS PELUCHES": 5.0,
+    "RENARD": 11.0,
+    "SAINT BERNARD": 11.0,
+    "VACHE": 11.0
+  },
+  "ACCESSOIRE": {
+    "BOUTEILLE ISOTHERME LA RUCHE UNICORLORE": 20.0,
+    "BOUTEILLES BLEUES SIMPLES": 7.0,
+    "BRACELET": 3.0,
+    "BRIQUET": 4.0,
+    "CARTES POSTALES": 0.5,
+    "GOBELET ANIMAL": 2.0,
+    "GOBELET LA RUCHE": 1.0,
+    "PLANCHES": 11.0,
+    "PLATEAUX": 5.0,
+    "PORTES MONNAIES": 5.0,
+    "R\u00c8GLES": 2.0,
+    "SET DE TABLE PROMO": 3.0,
+    "SET DE TABLE": 4.0,
+    "STYLO": 2.0
+  },
+  "MUG": {
+    "MUG MOUSQUETON": 9.0,
+    "MUGS SIMPLES": 7.0
+  },
+  "PORTE CLEF": {
+    "PORTE CLEF": 4.0
+  },
+  "PORTE CLEF CABINE": {
+    "PORTE CLEF CABINE": 5.0
+  }
+}
